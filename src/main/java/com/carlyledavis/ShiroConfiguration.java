@@ -54,7 +54,6 @@ public class ShiroConfiguration extends WebMvcConfigurerAdapter {
     }
 
     @Bean
-    @DependsOn("lifecycleBeanPostProcessor")
     public Realm realm(){
         SimpleAccountRealm realm = new SimpleAccountRealm( "test-account" );
         realm.addAccount( "test", "test" , "admin" );
