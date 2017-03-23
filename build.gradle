@@ -11,12 +11,15 @@ apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
+    compile 'com.auth0:java-jwt:3.1.0'
     compile 'org.apache.shiro:shiro-all:1.4.0-RC2'
     compile "org.springframework.boot:spring-boot-starter-web:1.5.2.RELEASE"
     compile 'org.slf4j:slf4j-api:1.7.21'
+    testCompile 'org.mockito:mockito-core:2.7.19'
+    testCompile 'org.assertj:assertj-core:3.6.2'
     testCompile 'junit:junit:4.12'
 }
